@@ -9,7 +9,7 @@ function App() {
         lastName: "Doe",
         phone: "+1 (719) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
+        isFavorite: true
     })
     
     function toggleFavorite() {
@@ -24,7 +24,7 @@ function App() {
             <article className="card">
                 <img src={profilePic} className="card--image" alt=''/>
                 <div className="card--info">
-                    <Star isFilled={contact.isFavorite} />
+                    <Star isFilled={contact.isFavorite} handleClick={toggleFavorite}/>
                     <h2 className="card--name">
                         {contact.firstName} {contact.lastName}
                     </h2>
